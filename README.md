@@ -21,7 +21,7 @@ Currently the project runs only on Unix systems.
 The only thing needed to be done is to run bash script *install.sh*.
 
 ```
-$ bash install.sh
+$ bash install.sh <author>
 ```
 
 What script does?
@@ -36,6 +36,33 @@ Dockerfile
 * Pull a Tomcat8 image from hub
 * Copy the unziped geoserver.war file from the temporary folder into the Tomcat8 webapps folder
 * Run *catalina.sh*  
+
+### Running container
+
+For running the container run one of the following commands:
+
+Map the ports (use to be *8080*)
+```
+$ sudo docker run -p <port>:8080 <geoserver image>
+```
+
+or run in detached mode:
+
+```
+$ sudo docker run -d -p <port>:8080 <geoserver image>
+
+```
+Check if container runs in the background:
+```
+$ sudo docker ps
+```
+
+Open up the favourite browser and run:
+```
+$ localhost:<port>/geoserver
+```
+
+## Enjoy ;)
 
 ## License
 
