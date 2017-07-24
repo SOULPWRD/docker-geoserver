@@ -39,7 +39,7 @@ Dockerfile
 
 ### Running container
 
-For running the container run one of the following commands:
+In order to run the container use one of the following commands:
 
 Map the ports (use to be *8080*)
 ```
