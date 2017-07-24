@@ -3,7 +3,7 @@
 VERSION=$(curl -L http://geoserver.org/release/stable/ | sed -n 's/<h1>GeoServer \([0-9]*.[0-9]*.[0-9]*\).*/\1/p' | sed 's/ //g')
 WAR_DIR="war"
 FILE="geoserver-${VERSION}-war.zip"
-TAG="webmap/geoserver"
+TAG="${1-public}/geoserver"
 
 ## ECHO a VERSION ##
 echo "VERSION------------->${VERSION}"
